@@ -4,6 +4,8 @@ import { coffees } from "../../utils/coffees";
 
 import { IconArrowTop, IconCart } from "../../components/Icons";
 
+import { PrimaryButton, SecondaryButton } from "../../components/Button";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -72,17 +74,17 @@ function Menu() {
                   <p>
                     R$ <span>{coffe.price}</span>
                   </p>
-                  <button className={styles.cart_button}>
+                  <SecondaryButton hidden={false}>
                     <IconCart />
-                  </button>
+                  </SecondaryButton>
                 </div>
               </div>
             ))}
           </Slider>
         </div>
-        <button className={styles.sign_in_button}>
+        <PrimaryButton hidden={false}>
           Ver todos <IconArrowTop />
-        </button>
+        </PrimaryButton>
       </div>
     </section>
   );

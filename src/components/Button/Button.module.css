@@ -1,0 +1,39 @@
+.primary_button {
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 15px 20px;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #38160d;
+  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .primary_button.hidden {
+    display: none;
+  }
+}
+
+.secondary_button {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  border: none;
+  cursor: pointer;
+  color: #07beb8;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: rgb(7, 190, 184, 20%);
+}
+
+@media (max-width: 768px) {
+  .secondary_button.hidden {
+    display: none;
+  }
+}

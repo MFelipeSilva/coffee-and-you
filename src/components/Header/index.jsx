@@ -2,6 +2,8 @@ import { IconCart, IconMenu } from "../Icons";
 
 import logo from "../../assets/logo.png";
 
+import { PrimaryButton, SecondaryButton } from "../Button";
+
 import styles from "./Header.module.css";
 
 export const Header = () => {
@@ -20,10 +22,10 @@ export const Header = () => {
           <li>Contato</li>
         </ul>
         <div>
-          <button className={styles.cart_button}>
+          <SecondaryButton hidden={true}>
             <IconCart />
-          </button>
-          <button className={styles.sign_in_button}>Entrar</button>
+          </SecondaryButton>
+          <PrimaryButton hidden={true}>Entrar</PrimaryButton>
         </div>
         <button className={styles.menu_button}>
           <IconMenu />
