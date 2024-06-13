@@ -56,7 +56,7 @@
   justify-content: center;
 }
 
-.cart-button {
+.cart_button {
   display: flex;
   width: 45px;
   height: 45px;
@@ -73,7 +73,7 @@
   }
 }
 
-.sign-in-button {
+.sign_in_button {
   cursor: pointer;
   border: none;
   color: #ffffff;
@@ -89,7 +89,7 @@
   }
 }
 
-.menu-button {
+.menu_button {
   display: none;
   width: 45px;
   height: 45px;
