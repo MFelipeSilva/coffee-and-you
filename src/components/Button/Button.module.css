@@ -1,8 +1,9 @@
 .primary_button {
   display: flex;
+  width: max-content;
   gap: 10px;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
   color: #ffffff;
   font-weight: 500;
   border-radius: 8px;
