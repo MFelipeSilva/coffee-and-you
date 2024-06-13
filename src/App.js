@@ -1,5 +1,6 @@
 import Home from "./pages/home";
 import Menu from "./pages/menu";
+import About from "./pages/about";
 
 import { Categories } from "./components/Categories";
 
@@ -11,6 +12,7 @@ function App() {
       <Home />
       <Categories />
       <Menu />
+      <About />
     </main>
   );
 }
