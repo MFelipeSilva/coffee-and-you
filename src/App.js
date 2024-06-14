@@ -1,6 +1,7 @@
 import Home from "./pages/home";
 import Menu from "./pages/menu";
 import About from "./pages/about";
+import Contact from "./pages/contact";
 
 import { Categories } from "./components/Categories";
 
@@ -13,6 +14,7 @@ function App() {
       <Categories />
       <Menu />
       <About />
+      <Contact />
     </main>
   );
 }

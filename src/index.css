@@ -2,6 +2,6 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
-  box-sizing: none;
+  box-sizing: border-box; 
   font-family: "Sans-serif";
 }

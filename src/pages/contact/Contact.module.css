@@ -1,0 +1,141 @@
+.section_container {
+  display: flex;
+  width: 100%;
+  min-height: 950px;
+  align-items: center;
+  justify-content: center;
+
+  & > .content {
+    display: flex;
+    max-width: 1147.19px;
+    min-width: 1147.19px;
+    width: 60%;
+    gap: 30px;
+    flex-direction: column;
+
+    & > .subtitle {
+      color: #000000;
+      margin: 0;
+      align-self: self-start;
+      font-style: italic;
+      font-size: clamp(30px, 3vw, 40px);
+      font-family: "Gilroy", sans-serif;
+    }
+
+    & > .form_container {
+      display: flex;
+      width: 100%;
+      gap: 80px;
+      align-items: start;
+      flex-direction: row;
+      justify-content: space-between;
+
+      & > .form {
+        display: flex;
+        max-width: 500px;
+        width: 500px;
+        flex-direction: column;
+
+        & > label:first-child {
+          margin-top: 0;
+        }
+
+        & > label {
+          margin-top: 50px;
+
+          & > input {
+            height: 42px;
+          }
+
+          & > textarea {
+            height: 263px;
+            resize: none;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: 300;
+            font-family: "Gilroy", sans-serif;
+            border-radius: 0;
+            box-sizing: border-box;
+            border-right: 2px solid #38160d;
+            border-bottom: 2px solid #38160d;
+          }
+        }
+
+        & > button {
+          width: 100% !important;
+          padding: 25px 0;
+          margin-top: 30px;
+          justify-content: center !important;
+        }
+
+        @media (max-width: 992px) {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+
+      & > .email_container {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        text-decoration: none;
+
+        & > p {
+          color: #000000;
+          font-size: clamp(18px, 4vw, 24px);
+          font-weight: 300;
+          font-family: "Gilroy", sans-serif;
+          transition: color 0.2s ease-in-out;
+        }
+
+        & > p:hover {
+          color: #07beb8;
+        }
+
+        & > div {
+          display: flex;
+          width: 110px;
+          height: 110px;
+          border-radius: 8px;
+          align-items: center;
+          justify-content: center;
+          background-color: #07beb8;
+
+          & > svg {
+            color: #ffffff;
+          }
+
+          @media (max-width: 992px) {
+            width: 80px;
+            height: 80px;
+
+            & > svg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+
+        @media (max-width: 992px) {
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 1280px) {
+      min-width: 0;
+      width: 90vw;
+    }
+  }
+}
