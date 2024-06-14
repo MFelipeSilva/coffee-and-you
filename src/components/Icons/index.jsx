@@ -1,5 +1,4 @@
 export * from "./cart";
-export * from "./menu";
 export * from "./send";
 export * from "./email";
 export * from "./twitter";
