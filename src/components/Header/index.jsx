@@ -44,7 +44,7 @@ export const Header = () => {
               offset={-150}
               duration={500}
               href="home"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(false)}
             >
               Início
             </Link>
@@ -57,7 +57,7 @@ export const Header = () => {
               offset={0}
               duration={500}
               href="menu"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(false)}
             >
               Cardápio
             </Link>
@@ -70,7 +70,7 @@ export const Header = () => {
               offset={-150}
               duration={500}
               href="about"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(false)}
             >
               Sobre
             </Link>
@@ -83,25 +83,26 @@ export const Header = () => {
               offset={0}
               duration={500}
               href="contact"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen(false)}
             >
               Contato
             </Link>
           </li>
+          <PrimaryButton hidden={false}>Entrar</PrimaryButton>
         </ul>
         <div className={styles.button_container}>
-          <SecondaryButton hidden={true}>
+          <SecondaryButton hidden={false}>
             <IconCart />
           </SecondaryButton>
           <PrimaryButton hidden={true}>Entrar</PrimaryButton>
+          <button
+            className={`${styles.menu_toggle} ${isOpen ? styles.active : ""}`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <div className={styles.menu_bar} data-position="top"></div>
+            <div className={styles.menu_bar} data-position="bottom"></div>
+          </button>
         </div>
-        <button
-          className={`${styles.menu_toggle} ${isOpen ? styles.active : ""}`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <div className={styles.menu_bar} data-position="top"></div>
-          <div className={styles.menu_bar} data-position="bottom"></div>
-        </button>
       </nav>
     </header>
   );
