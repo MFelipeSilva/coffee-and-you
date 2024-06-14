@@ -10,12 +10,11 @@
     max-width: 1147.19px;
     min-width: 1147.19px;
     width: 60%;
-    gap: 30px;
+    gap: 40px;
     flex-direction: column;
 
     & > .subtitle {
       color: #000000;
-      margin: 0;
       align-self: self-start;
       font-style: italic;
       font-size: clamp(30px, 3vw, 40px);
@@ -55,14 +54,13 @@
           input,
           textarea {
             width: 100%;
-            border: none;
+            border: hidden;
             outline: none;
             padding: 10px;
             font-size: 18px;
             font-weight: 300;
-            font-family: "Gilroy", sans-serif;
             border-radius: 0;
-            box-sizing: border-box;
+            font-family: "Gilroy", sans-serif;
             border-right: 2px solid #38160d;
             border-bottom: 2px solid #38160d;
           }
@@ -89,7 +87,7 @@
 
         & > p {
           color: #000000;
-          font-size: clamp(18px, 4vw, 24px);
+          font-size: clamp(18px, 4.5vw, 24px);
           font-weight: 300;
           font-family: "Gilroy", sans-serif;
           transition: color 0.2s ease-in-out;

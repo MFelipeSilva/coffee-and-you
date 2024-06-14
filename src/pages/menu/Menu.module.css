@@ -13,7 +13,7 @@
   max-width: 1147.19px;
   min-width: 1147.19px;
   width: 60%;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -52,7 +52,7 @@
 
 :global(.slick-list) {
   display: flex !important;
-  margin: 0 -30px;
+  margin: 0 -20px;
 }
 
 :global(.slick-track) {
@@ -61,11 +61,11 @@
 
 :global(.slick-slide) {
   display: flex !important;
-  margin: 0 30px;
+  margin: 0 20px;
 
   & > div > div {
     display: flex !important;
-    width: 90% !important;
+    width: 100% !important;
   }
 }
 
@@ -82,13 +82,14 @@
 }
 
 :global(.slick-slide:last-child) {
-  margin-right: 40px;
+  margin-right: 0;
 }
 
 .coffe_card {
   display: flex !important;
-  max-width: 290px;
+  max-width: 400px;
   width: 100%;
+  gap: 20px;
   height: 380px;
   padding: 10px 30px;
   text-align: center;

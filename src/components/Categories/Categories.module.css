@@ -12,7 +12,7 @@
   max-width: 1147.19px;
   min-width: 1147.19px;
   width: 60%;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
   flex-direction: column;
 
@@ -44,7 +44,6 @@
 
   & > div {
     display: flex !important;
-    margin: 0;
   }
 
   & > div > div > div {
@@ -79,7 +78,7 @@
     align-items: center;
     justify-content: center;
     font-family: "Gilroy", sans-serif;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }

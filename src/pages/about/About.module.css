@@ -24,7 +24,6 @@
 
       & > .subtitle {
         color: #ffffff;
-        margin: 0;
         align-self: self-start;
         font-style: italic;
         font-size: clamp(30px, 3vw, 40px);
@@ -34,7 +33,6 @@
       & > .text {
         color: #ffffff;
         max-width: 481px;
-        margin: 0;
         font-size: clamp(18px, 2.5vw, 22px);
         font-family: "Gilroy", sans-serif;
       }

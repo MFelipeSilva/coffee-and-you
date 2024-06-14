@@ -31,7 +31,7 @@
       & > .subtitle {
         color: #000000;
         font-size: clamp(24px, 3vw, 26px);
-        margin: 0;
+
         font-family: "Gilroy", sans-serif;
       }
 

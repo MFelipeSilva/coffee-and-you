@@ -45,7 +45,7 @@ function Menu() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1.5,
+          slidesToShow: 1.3,
           slidesToScroll: 1,
         },
       },
