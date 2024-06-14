@@ -1,0 +1,117 @@
+.footer_container {
+  display: flex;
+  min-height: 400px;
+  width: 100%;
+  height: auto;
+  padding-top: 7em;
+  align-items: start;
+  justify-content: center;
+  background-color: #f3f2f2;
+
+  & > .footer_content {
+    display: flex;
+    position: rAelative;
+    max-width: 1147.19px;
+    min-width: 1147.19px;
+    width: 60%;
+    align-items: start;
+    justify-content: space-between;
+
+    & > img {
+      width: 100px;
+      height: 58.6px;
+      object-fit: contain;
+    }
+
+    & > .content {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+
+      & > .subtitle {
+        color: #000000;
+        font-size: clamp(24px, 3vw, 26px);
+        margin: 0;
+        font-family: "Gilroy", sans-serif;
+      }
+
+      & > .input_container {
+        position: relative;
+
+        & > input {
+          width: 280px;
+          height: 42px;
+          border: none;
+          outline: none;
+          padding: 10px;
+          padding-right: 50px;
+          font-size: 16px;
+          font-weight: 300;
+          font-family: "Gilroy", sans-serif;
+          border-radius: 0;
+          box-sizing: border-box;
+          background-color: transparent;
+          border-right: 2px solid #38160d;
+          border-bottom: 2px solid #38160d;
+        }
+
+        & > .send_button {
+          display: flex;
+          width: 42px;
+          height: 42px;
+          top: 0;
+          right: 0;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          position: absolute;
+          align-items: center;
+          justify-content: center;
+          background-color: #38160d;
+
+          & > svg {
+            color: #ffffff;
+          }
+        }
+      }
+
+      & > .follow_up_container {
+        display: flex;
+        gap: 15px;
+
+        & > .social_media_button {
+          display: flex;
+          width: 60px;
+          height: 60px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border-radius: 100%;
+          align-items: center;
+          justify-content: center;
+          background-color: #38160d;
+
+          & > svg {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1280px) {
+      min-width: 0;
+      width: 90vw;
+    }
+
+    @media (max-width: 768px) {
+      gap: 80px;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    min-height: 600px;
+    padding-top: 0;
+    align-items: center;
+  }
+}
