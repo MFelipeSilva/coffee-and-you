@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Element } from "react-scroll";
 
 import Home from "./pages/home";
@@ -11,21 +12,33 @@ import "./App.css";
 
 function App() {
   return (
-    <main className="main-container">
-      <Element name="home">
-        <Home />
-      </Element>
-      <Element name="menu">
-        <Categories />
-        <Menu />
-      </Element>
-      <Element name="about">
-        <About />
-      </Element>
-      <Element name="contact">
-        <Contact />
-      </Element>
-    </main>
+    <Router>
+      <main className="main-container">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Element name="home">
+                  <Home />
+                </Element>
+                <Element name="menu">
+                  <Categories />
+                  <Menu />
+                </Element>
+                <Element name="about">
+                  <About />
+                </Element>
+                <Element name="contact">
+                  <Contact />
+                </Element>
+              </>
+            }
+          />
+          <Route path="/cart" element={<></>} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 

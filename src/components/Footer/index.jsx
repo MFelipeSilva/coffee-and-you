@@ -1,6 +1,6 @@
 import { IconFacebook, IconInstagram, IconSend, IconTwitter } from "../Icons";
 
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.svg";
 
 import styles from "./Footer.module.css";
 
