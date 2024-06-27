@@ -3,8 +3,11 @@ import { Element } from "react-scroll";
 
 import Home from "./pages/home";
 import Menu from "./pages/menu";
+import Cart from "./pages/cart";
 import About from "./pages/about";
 import Contact from "./pages/contact";
+
+import { Footer } from "./components/Footer";
 
 import { Categories } from "./components/Categories";
 
@@ -32,10 +35,11 @@ function App() {
                 <Element name="contact">
                   <Contact />
                 </Element>
+                <Footer />
               </>
             }
           />
-          <Route path="/cart" element={<></>} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </main>
     </Router>

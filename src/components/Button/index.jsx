@@ -1,8 +1,10 @@
 import styles from "./Button.module.css";
 
-export const PrimaryButton = ({ hidden, children }) => {
+export const PrimaryButton = ({ hidden, children, form, type }) => {
   return (
     <button
+      form={form}
+      type={type}
       className={`${styles.primary_button} ${hidden ? styles.hidden : ""}`}
     >
       {children}
