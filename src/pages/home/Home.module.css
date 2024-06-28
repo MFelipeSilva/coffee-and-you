@@ -1,13 +1,14 @@
 .section_container {
   display: flex;
   width: 100%;
-  min-height: 900px;
+  min-height: 750px;
   height: 100%;
   align-items: center;
   justify-content: center;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../../assets/home-banner.png");
+  background-image: url("../../assets/home-banner.jpg");
 }
 
 .section_container > div {
@@ -20,7 +21,7 @@
     position: relative;
     max-width: 568px;
     color: #ffffff;
-    font-size: clamp(70px, 5.5vw, 76px);
+    font-size: clamp(70px, 5.5vw, 55px);
     font-weight: 800;
     font-family: "Gilroy", sans-serif;
     transform-origin: left top;
