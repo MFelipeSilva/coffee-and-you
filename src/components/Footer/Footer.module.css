@@ -17,10 +17,13 @@
     align-items: start;
     justify-content: space-between;
 
-    & > img {
-      width: 100px;
-      height: 58.6px;
-      object-fit: contain;
+    & > a {
+      width: 90px;
+      height: 53px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../../assets/logo.png");
     }
 
     & > .content {

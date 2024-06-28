@@ -4,8 +4,6 @@ import { Link } from "react-scroll";
 
 import { IconCart } from "../Icons";
 
-import logo from "../../assets/logo.svg";
-
 import { PrimaryButton, SecondaryButton } from "../Button";
 
 import styles from "./Header.module.css";
@@ -27,14 +25,12 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
-        <a href="/">
-          <img
-            src={logo}
-            className={styles.logo}
-            alt="Coffee trip cup with site name"
-            title="Back to home"
-          />
-        </a>
+        <a
+          href="/"
+          className={styles.logo}
+          alt="Coffee trip cup with site name"
+          title="Back to home"
+        />
         <ul
           className={`${styles.links_container} ${isOpen ? styles.active : ""}`}
         >

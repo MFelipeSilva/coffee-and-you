@@ -20,10 +20,13 @@
   }
 }
 
-.navbar > a > .logo {
-  width: auto;
-  height: auto;
-  object-fit: contain;
+.navbar > a {
+  width: 90px;
+  height: 53px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../../assets/logo.png");
 }
 
 .navbar > .links_container {

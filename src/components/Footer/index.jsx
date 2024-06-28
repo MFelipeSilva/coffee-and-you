@@ -1,18 +1,12 @@
 import { IconFacebook, IconInstagram, IconSend, IconTwitter } from "../Icons";
 
-import logo from "../../assets/logo.svg";
-
 import styles from "./Footer.module.css";
 
 export const Footer = () => {
   return (
     <footer className={styles.footer_container}>
       <div className={styles.footer_content}>
-        <img
-          src={logo}
-          alt="Coffee trip cup with site name"
-          title="BAack to home"
-        />
+        <a href="/" alt="Coffee trip cup with site name" title="Back to home" />
         <div className={styles.content}>
           <h3 className={styles.subtitle}>
             Inscreva-se <br /> para saber mais
