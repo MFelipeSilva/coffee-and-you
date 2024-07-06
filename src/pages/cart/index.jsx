@@ -1,3 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
+import { useForm } from "react-hook-form";
+
+import z from "zod";
+
+import { zodResolver } from "@hookform/resolvers/zod";
+
 import { PrimaryButton } from "../../components/Button";
 
 import { IconBank, IconCreditCard, IconMoney } from "../../components/Icons";
@@ -5,6 +13,31 @@ import { IconBank, IconCreditCard, IconMoney } from "../../components/Icons";
 import styles from "./Cart.module.css";
 
 function Cart() {
+  const createFormSchema = z.object({
+    cep: z.string().min(3, "O CEP é obrigatório!"),
+    city: z.string().min(3, "A Cidade é obrigatória!"),
+    street: z.string().min(3, "A Rua é obrigatória!"),
+    number: z.string().min(3, "O Número é obrigatório!"),
+    uf: z.string().min(1, "O UF é obrigatório!"),
+    neighborhood: z.string().min(3, "O Bairro é obrigatório!"),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: zodResolver(createFormSchema) });
+
+  const navigate = useNavigate();
+
+  const sendForm = (data) => {
+    try {
+      navigate("/successs");
+    } catch (error) {
+      return error;
+    }
+  };
+
   return (
     <section className={styles.section_container}>
       <div className={styles.content}>
@@ -15,34 +48,68 @@ function Cart() {
               <h4>Endereço para entrega</h4>
               <p>Informe o endereço onde deseja receber seu pedido</p>
             </header>
-            <form className={styles.form} id="idForm">
+            <form
+              className={styles.form}
+              id="idForm"
+              onSubmit={handleSubmit(sendForm)}
+            >
               <div>
                 <label>
-                  <input type="number" placeholder="CEP" required />
+                  <input type="number" placeholder="CEP" {...register("cep")} />
+                  {errors.cep && <span>{errors.cep.message}</span>}
                 </label>
                 <label>
-                  <input type="text" placeholder="Cidade" required />
+                  <input
+                    type="text"
+                    placeholder="Cidade"
+                    {...register("city")}
+                  />
+
+                  {errors.city && <span>{errors.city.message}</span>}
                 </label>
               </div>
               <div>
                 <label>
-                  <input type="text" placeholder="Rua" required />
+                  <input
+                    type="text"
+                    placeholder="Rua"
+                    {...register("street")}
+                  />
+                  {errors.street && <span>{errors.street.message}</span>}
                 </label>
               </div>
               <div>
                 <label>
-                  <input type="number" placeholder="Número" required />
+                  <input
+                    type="number"
+                    placeholder="Número"
+                    {...register("number")}
+                  />
+                  {errors.number && <span>{errors.number.message}</span>}
                 </label>
                 <label>
-                  <input type="text" placeholder="Complemento" required />
+                  <input type="text" placeholder="Complemento" />
                 </label>
               </div>
               <div>
                 <label>
-                  <input type="text" placeholder="UF" maxLength={2} required />
+                  <input
+                    type="text"
+                    placeholder="UF"
+                    maxLength={2}
+                    {...register("uf")}
+                  />
+                  {errors.uf && <span>{errors.uf.message}</span>}
                 </label>
                 <label>
-                  <input type="text" placeholder="Bairro" required />
+                  <input
+                    type="text"
+                    placeholder="Bairro"
+                    {...register("neighborhood")}
+                  />
+                  {errors.neighborhood && (
+                    <span>{errors.neighborhood.message}</span>
+                  )}
                 </label>
               </div>
             </form>

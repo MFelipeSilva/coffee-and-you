@@ -112,6 +112,10 @@
         }
 
         & > label {
+          display: flex;
+          gap: 7px;
+          flex-direction: column;
+
           & > input {
             width: 100%;
             border: hidden;
@@ -124,6 +128,12 @@
             font-family: "Gilroy", sans-serif;
             border-right: 2px solid #38160d;
             border-bottom: 2px solid #38160d;
+          }
+
+          & > span {
+            color: #ff0000;
+            font-size: clamp(13px, 2vw, 14px);
+            font-family: "Gilroy", sans-serif;
           }
         }
       }
