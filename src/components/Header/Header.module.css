@@ -90,6 +90,29 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  & > a {
+    position: relative;
+    text-decoration: none;
+
+    & > button > span {
+      position: absolute;
+      display: flex;
+      width: 21px;
+      height: 21px;
+      top: -8px;
+      right: -8px;
+      color: #ffffff;
+      font-size: 13px;
+      border-radius: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      line-height: 12px;
+      background-color: #07beb8;
+      font-family: "Gilroy", sans-serif;
+    }
+  }
 }
 
 .navbar > .button_container > .menu_toggle {

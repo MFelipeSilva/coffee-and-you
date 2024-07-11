@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 import { Link } from "react-scroll";
 
+import { useCart } from "../../hooks/useCart";
+
 import { IconCart } from "../Icons";
 
 import { PrimaryButton, SecondaryButton } from "../Button";
@@ -21,6 +23,8 @@ export const Header = () => {
       document.body.style.overflow = "auto";
     };
   }, [isOpen]);
+
+  const { total } = useCart();
 
   return (
     <header className={styles.header}>
@@ -92,6 +96,7 @@ export const Header = () => {
           <a href="/cart">
             <SecondaryButton hidden={false}>
               <IconCart />
+              <span>{total.items}</span>
             </SecondaryButton>
           </a>
           <PrimaryButton hidden={true}>Entrar</PrimaryButton>

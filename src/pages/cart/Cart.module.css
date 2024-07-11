@@ -177,12 +177,94 @@
   & > .cart_container {
     display: flex;
     width: 450px;
-    height: 260px;
+    height: 100%;
     padding: 45px;
+    gap: 30px;
     border-radius: 8px;
     flex-direction: column;
     background-color: #f3f2f2;
-    justify-content: space-between;
+
+    & > .products_container > .product_card {
+      display: flex;
+      gap: 15px;
+      padding-bottom: 1.5em;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid rgb(230, 230, 230);
+
+      & > img {
+        width: 65px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      & > .product_content {
+        display: flex;
+        width: 100%;
+        gap: 8px;
+        flex-direction: column;
+
+        & > .product_header {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+
+          & > h3 {
+            font-size: clamp(14px, 2.5vw, 17px);
+            font-weight: 500;
+            font-family: "Gilroy", sans-serif;
+          }
+
+          & > span {
+            font-size: clamp(16px, 2.5vw, 18px);
+            font-weight: 600;
+            font-family: "Gilroy", sans-serif;
+          }
+        }
+
+        & > .button_content {
+          display: flex;
+          gap: 0.5em;
+
+          & > .product_counter {
+            display: flex;
+            width: max-content;
+            border-radius: 8px;
+            align-items: center;
+            padding: 0.2em 0.6em;
+            justify-content: center;
+            background-color: rgb(7, 190, 184, 20%);
+
+            & > span {
+              display: inline-block;
+              width: 2em;
+              font-size: 17px;
+              text-align: center;
+              font-family: "Gilroy", sans-serif;
+            }
+
+            & > button {
+              color: #07beb8;
+              cursor: pointer;
+              background-color: transparent;
+            }
+          }
+
+          & > button {
+            display: flex;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            color: #07beb8;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(7, 190, 184, 20%);
+          }
+        }
+      }
+    }
 
     & > .text_container {
       display: flex;
@@ -197,7 +279,6 @@
         & > p {
           color: #000000;
           font-size: 16px;
-
           font-family: "Gilroy", sans-serif;
         }
       }

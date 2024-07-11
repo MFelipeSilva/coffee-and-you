@@ -35,7 +35,7 @@ export const coffees = [
     price: 6.55,
   },
   {
-    id: "65",
+    id: "5",
     title: "Chocolate Quente",
     description: "Bebida feita com chocolate dissolvido no leite quente e café",
     image: coffee_image_5,

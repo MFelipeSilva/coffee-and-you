@@ -1,5 +1,7 @@
 import Slider from "react-slick";
 
+import { useCart } from "../../hooks/useCart";
+
 import { coffees } from "../../utils/coffees";
 
 import { IconArrowTop, IconCart } from "../../components/Icons";
@@ -12,6 +14,8 @@ import "slick-carousel/slick/slick-theme.css";
 import styles from "./Menu.module.css";
 
 function Menu() {
+  const { addProductToCart } = useCart();
+
   const settings = {
     dots: false,
     infinite: false,
@@ -65,16 +69,19 @@ function Menu() {
         <h2 className={styles.subtitle}>Nossos cafés</h2>
         <div className={styles.carousel_content}>
           <Slider {...settings}>
-            {coffees.map((coffe) => (
-              <div key={coffe.id} className={styles.coffe_card}>
-                <img src={coffe.image} alt="categories of coffees" />
-                <h3>{coffe.title}</h3>
-                <p>{coffe.description}</p>
+            {coffees.map((coffee) => (
+              <div key={coffee.id} className={styles.coffee_card}>
+                <img src={coffee.image} alt="categories of coffees" />
+                <h3>{coffee.title}</h3>
+                <p>{coffee.description}</p>
                 <div>
                   <p>
-                    R$ <span>{coffe.price}</span>
+                    R$ <span>{coffee.price}</span>
                   </p>
-                  <SecondaryButton hidden={false}>
+                  <SecondaryButton
+                    hidden={false}
+                    onClick={() => addProductToCart({ ...coffee })}
+                  >
                     <IconCart />
                   </SecondaryButton>
                 </div>

@@ -85,13 +85,14 @@
   margin-right: 0;
 }
 
-.coffe_card {
+.coffee_card {
   display: flex !important;
   max-width: 400px;
   width: 100%;
   gap: 20px;
   height: 380px;
   padding: 10px 30px;
+  cursor: pointer;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -99,8 +100,9 @@
   background-color: #f3f2f2;
 
   & > img {
-    width: 120px;
-    height: 107.27px;
+    width: 110px;
+    height: auto;
+    object-fit: contain;
   }
 
   & > h3 {
