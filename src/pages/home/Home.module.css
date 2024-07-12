@@ -1,7 +1,7 @@
 .section_container {
   display: flex;
   width: 100%;
-  min-height: 750px;
+  min-height: 800px;
   height: 100%;
   align-items: center;
   justify-content: center;
