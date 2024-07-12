@@ -78,19 +78,21 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
-              href="contact"
-              onClick={() => setIsOpen(false)}
-            >
-              Contato
-            </Link>
+            <a href="/stores" onClick={() => setIsOpen(false)}>
+              Lojas
+            </a>
           </li>
-          <PrimaryButton hidden={false}>Entrar</PrimaryButton>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            href="contact"
+            onClick={() => setIsOpen(false)}
+          >
+            <PrimaryButton hidden={true}>Contato</PrimaryButton>
+          </Link>
         </ul>
         <div className={styles.button_container}>
           <a href="/cart">
@@ -99,7 +101,17 @@ export const Header = () => {
               <span>{total.items}</span>
             </SecondaryButton>
           </a>
-          <PrimaryButton hidden={true}>Entrar</PrimaryButton>
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+            href="contact"
+            onClick={() => setIsOpen(false)}
+          >
+            <PrimaryButton hidden={true}>Contato</PrimaryButton>
+          </Link>
           <button
             className={`${styles.menu_toggle} ${isOpen ? styles.active : ""}`}
             onClick={() => setIsOpen(!isOpen)}
